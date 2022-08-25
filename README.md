@@ -54,7 +54,7 @@ List topics:
 kafka-topics --bootstrap-server kafka1:9092 --list
 ```
 
-Produce a message:
+Produce messages:
 
 ```shell
 kafka-console-producer --broker-list kafka1:9092 --topic test
