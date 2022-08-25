@@ -41,23 +41,28 @@ docker run --rm -it --network kafka confluentinc/cp-kafka:7.2.0 bash
 
 Create a topic:
 
-```bash
+```shell
 kafka-topics --create --bootstrap-server kafka1:9092 \
     --replication-factor 3 \
     --partitions 3 \
     --topic test
+```
+
+List topics:
+
+```shell
 kafka-topics --bootstrap-server kafka1:9092 --list
 ```
 
 Produce a message:
 
-```bash
+```shell
 kafka-console-producer --broker-list kafka1:9092 --topic test
 ```
 
 Consume messages:
 
-```bash
+```shell
 kafka-console-consumer --from-beginning --group test \
     --topic test  \
     --bootstrap-server kafka1:9092
