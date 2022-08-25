@@ -17,6 +17,11 @@ Plan:
 
 ```shell
 terraform plan -out=tfplan
+```
+
+Show the plan in json format:
+
+```shell
 terraform show -json tfplan | jq
 ```
 
@@ -34,7 +39,8 @@ terraform destroy -auto-approve
 
 ### Docker commands
 
-Open a terminal
+Open a terminal:
+
 ```shell
 docker run --rm -it --network kafka confluentinc/cp-kafka:7.2.0 bash
 ```
